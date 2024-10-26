@@ -64,6 +64,15 @@ public struct ReactangleWithCurvedTopView: View {
     var actionNo: () -> Void
     var actionYes: () -> Void
     
+    public init(nameImage: String, nameColor: Color, title: String, subtitle: String, actionNo: @escaping () -> Void, actionYes: @escaping () -> Void) {
+        self.nameImage = nameImage
+        self.nameColor = nameColor
+        self.title = title
+        self.subtitle = subtitle
+        self.actionNo = actionNo
+        self.actionYes = actionYes
+    }
+    
     public var body: some View {
         ZStack {
             Color.black.opacity(0.7)
